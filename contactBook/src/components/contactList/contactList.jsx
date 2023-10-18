@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import Contact from '../contact/contact';
 import JohnAvatar from '../../assets/JohnAvatar.jpg'
 import JaneAvatar from '../../assets/JaneAvatar.jpg'
+import NewContact from '../newContact/newContact';
+
+
 
 
 const initialContacts = [
@@ -26,9 +29,14 @@ const initialContacts = [
 function ContactList() {
     const [contacts, setContacts] = useState(initialContacts)
 
-    return contacts.map((contact) => {
-        return <Contact key={contact.id} data={contact} />
-    })
+    return (
+        <div>
+            {contacts.map((contact) => (
+                <Contact key={contact.id} data={contact} />
+            ))}
+        </div>
+        
+    )
 }
 
 export default ContactList;

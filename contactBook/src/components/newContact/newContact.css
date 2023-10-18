@@ -1,0 +1,13 @@
+.NewcontactCard {
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    padding: 50px;
+    margin: 50px;
+    border-style: solid;
+    
+}
+
+input {
+    width: 50%;
+}

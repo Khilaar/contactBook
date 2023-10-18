@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './contact.css';
 
+
 function Contact({ data }) {
-  console.log(data.address)
   //Set the state of showInfos to true or false, depending if the button was clicked
   const [showInfos, setShowInfos] = useState(false);
 

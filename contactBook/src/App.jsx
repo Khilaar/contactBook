@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import ContactList from './components/contactList/contactList'
+import NewContact from './components/newContact/newContact'
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
 
   return (
     <>
+      <NewContact></NewContact>
       <ContactList></ContactList>
     </>
   )
