@@ -1,0 +1,23 @@
+.contactCard {
+    background-color: aqua;
+    padding: 50px;
+    margin: 50px;
+    border-style: solid;
+    
+}
+
+.mainInfos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.profilePicture {
+    height: 50px;
+}
+
+.contactButtons {
+    display: flex;
+    justify-content: space-around;
+}
