@@ -11,3 +11,12 @@
 input {
     width: 50%;
 }
+
+.newContact {
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    padding: 50px;
+    margin: 50px;
+    border-style: solid;
+}

@@ -35,7 +35,6 @@ function Contact({ data }) {
           <h1>{`${data.firstName} ${data.lastName}`}</h1>
           <button onClick={toggleInfos}>Infos</button>
         </div>
-        {/* Display hiddenInfos when hiddenInfos is true */ }
         {hiddenInfos}
       </div>
     </>

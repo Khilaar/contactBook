@@ -31,7 +31,8 @@ function NewContact() {
     const changeInputPhoneNumber = function (event) {
         setInputValuePhoneNumber(event.target.value);   
     };
-
+    
+    let addedContactsArr = []
     const saveNewContact = function () {
         let newContact = {
             firstName: inputValueFirstName,
@@ -39,9 +40,9 @@ function NewContact() {
             address: inputValueAddress,
             phoneNumber: inputValuePhoneNumber,
         };
-        setContacts([...initialContacts, newContact]);
+        addedContactsArr.push(newContact);
+        console.log(addedContactsArr)
     };
-
 
     return (
     <>
