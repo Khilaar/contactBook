@@ -20,3 +20,13 @@ input {
     margin: 50px;
     border-style: solid;
 }
+
+.visibleNewContactCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.showFormButton {
+    height: 20px;
+}

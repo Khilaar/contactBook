@@ -31,9 +31,19 @@ function NewContact() {
     const changeInputPhoneNumber = function (event) {
         setInputValuePhoneNumber(event.target.value);   
     };
-    
+
+    const [showForm, setShowForm] = useState(false)
+
+    const toggleInfos = () => {
+        setShowForm(!showForm);
+    };
+
+
+    let invisibleForm = false
     let addedContactsArr = []
-    const saveNewContact = function () {
+    if (showForm) {
+        
+        const saveNewContact = function () {
         let newContact = {
             firstName: inputValueFirstName,
             lastName: inputValueLastName,
@@ -43,16 +53,25 @@ function NewContact() {
         addedContactsArr.push(newContact);
         console.log(addedContactsArr)
     };
+        invisibleForm = (
+            <div className='invisibleNewContactCard'>
+                <input type="text" placeholder={inputValueFirstName} onChange={changeInputFirstName}/>
+                <input type="text" placeholder={inputValueLastName} onChange={changeInputLastName}/>
+                <input type="text" placeholder={inputValueAddress} onChange={changeInputAddress}/>
+                <input type="tel" placeholder={inputValuePhoneNumber} onChange={changeInputPhoneNumber}/>
+                <button onClick={saveNewContact}>Submit</button>
+            </div>
+        )
+    }
 
     return (
     <>
         <div className="NewcontactCard">
-            <h1>create new contact</h1>
-            <input type="text" placeholder={inputValueFirstName} onChange={changeInputFirstName}/>
-            <input type="text" placeholder={inputValueLastName} onChange={changeInputLastName}/>
-            <input type="text" placeholder={inputValueAddress} onChange={changeInputAddress}/>
-            <input type="tel" placeholder={inputValuePhoneNumber} onChange={changeInputPhoneNumber}/>
-            <button onClick={saveNewContact}>Submit</button>
+            <div className='visibleNewContactCard'>
+                <h1>create new contact</h1>
+                <button className='showFormButton' onClick={toggleInfos}>Hi</button>
+            </div>
+            {invisibleForm}
         </div>
     </>
     );
