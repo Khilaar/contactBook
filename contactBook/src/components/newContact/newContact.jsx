@@ -90,7 +90,7 @@ function NewContact({ allContacts, setContacts }) {
         <div className="NewcontactCard">
             <div className='visibleNewContactCard'>
                 <h1>create new contact</h1>
-                <button className='showFormButton' onClick={toggleInfos}>Add new</button>
+                <button className='showFormButton' onClick={toggleInfos}>Add</button>
             </div>
             {/*Depending on the state the invisible form is shown or not*/}
             {invisibleForm}
