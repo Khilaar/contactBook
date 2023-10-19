@@ -9,7 +9,9 @@ function App() {
 
   return (
     <>
-      
+      <div className='titleContainer'>
+        <h1 className='title'>Personal Contact Book</h1>
+      </div>
       <ContactList></ContactList>
     </>
   )

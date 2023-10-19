@@ -6,8 +6,8 @@
     margin: 50px;
     border-style: solid;
     border-radius: 30px;
-    
-    
+    width: 50vw;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
 }
 
 input {
@@ -20,7 +20,8 @@ h1 {
 
 button {
     color: white;
-    background-color: black;
+    background-color: rgb(51, 51, 51);
+    border-radius: 50px;
 }
 
 .newContact {
@@ -30,6 +31,7 @@ button {
     padding: 50px;
     margin: 50px;
     border-style: solid;
+
 }
 
 .visibleNewContactCard {
@@ -39,8 +41,12 @@ button {
     background-color: aqua;
 }
 
-.visibleNewContactCard {
+.invisibleNewContactCard {
     background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-bottom: 5px;
 }
 
 .showFormButton {
@@ -53,4 +59,5 @@ button {
 
 input {
     background-color: aqua;
+    border-width: 1px;
 }

@@ -3,6 +3,7 @@ import Contact from '../contact/contact';
 import JohnAvatar from '../../assets/JohnAvatar.jpg'
 import JaneAvatar from '../../assets/JaneAvatar.jpg'
 import NewContact from '../newContact/newContact';
+import './contactList.css';
 
 
 
@@ -30,7 +31,7 @@ function ContactList() {
     const [contacts, setContacts] = useState(initialContacts);
 
     return (
-        <div>
+        <div className='everything'>
             <NewContact allContacts={contacts} setContacts={setContacts} />
             {contacts.map((contact) => (
                 <Contact key={contact.id} data={contact} />

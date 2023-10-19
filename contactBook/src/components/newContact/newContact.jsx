@@ -45,6 +45,12 @@ function NewContact({ allContacts, setContacts }) {
 
     let addedContactsArr = [];
 
+    const [selectedFile, setSelectedFile] = useState(null);
+
+    const handleFileChange = (event) => {
+        setSelectedFile(URL.createObjectURL(event.target.files[0]));
+    };
+
     if (showForm) {
         const saveNewContact = function () {
             let newContact = {
@@ -53,7 +59,7 @@ function NewContact({ allContacts, setContacts }) {
                 lastName: inputValueLastName,
                 address: inputValueAddress,
                 phone: inputValuePhoneNumber,
-                avatar: '',
+                avatar: selectedFile,
             };
 
             
@@ -71,6 +77,7 @@ function NewContact({ allContacts, setContacts }) {
                 <input type="text" placeholder={inputValueLastName} onChange={changeInputLastName}/>
                 <input type="text" placeholder={inputValueAddress} onChange={changeInputAddress}/>
                 <input type="tel" placeholder={inputValuePhoneNumber} onChange={changeInputPhoneNumber}/>
+                <input type="file" accept=".jpg, .png" onChange={handleFileChange}/>
                 
             </div>
             <button onClick={saveNewContact}>Submit</button>
@@ -83,7 +90,7 @@ function NewContact({ allContacts, setContacts }) {
         <div className="NewcontactCard">
             <div className='visibleNewContactCard'>
                 <h1>create new contact</h1>
-                <button className='showFormButton' onClick={toggleInfos}>Hi</button>
+                <button className='showFormButton' onClick={toggleInfos}>Add new</button>
             </div>
             {/*Depending on the state the invisible form is shown or not*/}
             {invisibleForm}
