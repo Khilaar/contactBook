@@ -6,12 +6,12 @@
     margin: 50px;
     border-style: solid;
     border-radius: 30px;
-    width: 50vw;
+    width: 70vw;
     box-shadow: 5px 5px 5px rgb(0, 0, 0);
 }
 
 input {
-    width: 100%;
+    width: 50%;
     border-radius: 5px;
     box-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
