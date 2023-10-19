@@ -77,7 +77,7 @@ function NewContact({ allContacts, setContacts }) {
                 <input type="text" placeholder={inputValueLastName} onChange={changeInputLastName}/>
                 <input type="text" placeholder={inputValueAddress} onChange={changeInputAddress}/>
                 <input type="tel" placeholder={inputValuePhoneNumber} onChange={changeInputPhoneNumber}/>
-                <input type="file" accept=".jpg, .png" onChange={handleFileChange}/>
+                <input className='fileUploader' type="file" accept=".jpg, .png" onChange={handleFileChange}/>
                 
             </div>
             <button onClick={saveNewContact}>Submit</button>

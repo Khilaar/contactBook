@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './contact.css';
 
 
-function Contact({ data }) {
+function Contact({ data, allContacts, setContacts }) {
   //Set the state of showInfos to true or false, depending if the button was clicked
   const [showInfos, setShowInfos] = useState(false);
 
@@ -10,6 +10,10 @@ function Contact({ data }) {
   const toggleInfos = () => {
     setShowInfos(!showInfos);
   };
+
+  const deleteContact = (e) => {
+    setContacts(allContacts.filter((x) => x.firstName !== data.firstName))
+  }
 
   //initially we dont want to see the hidden Infos so we set this variable to false 
   let hiddenInfos = false;
@@ -20,7 +24,7 @@ function Contact({ data }) {
         <p>{ `adress: ${data.address}` }</p>
         <p>{`phone number: ${data.phone}`}</p>
         <div className='contactButtons'>
-          <button className='contactDeleteButton'>DELETE</button>
+          <button className='contactDeleteButton' onClick={deleteContact}>DELETE</button>
           <button className='contactEditButton'>EDIT</button>
         </div>
       </div>

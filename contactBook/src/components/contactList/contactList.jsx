@@ -34,7 +34,7 @@ function ContactList() {
         <div className='everything'>
             <NewContact allContacts={contacts} setContacts={setContacts} />
             {contacts.map((contact) => (
-                <Contact key={contact.id} data={contact} />
+                <Contact key={contact.id} data={contact} allContacts={contacts} setContacts={setContacts}/>
             ))}
         </div>
     );
