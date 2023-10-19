@@ -27,17 +27,16 @@ const initialContacts = [
 ]
 
 function ContactList() {
-    const [contacts, setContacts] = useState(initialContacts)
+    const [contacts, setContacts] = useState(initialContacts);
 
     return (
         <div>
+            <NewContact allContacts={contacts} setContacts={setContacts} />
             {contacts.map((contact) => (
                 <Contact key={contact.id} data={contact} />
             ))}
         </div>
-        
-        
-    )
+    );
 }
 
 export default ContactList;

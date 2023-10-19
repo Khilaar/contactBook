@@ -5,11 +5,22 @@
     padding: 50px;
     margin: 50px;
     border-style: solid;
+    border-radius: 30px;
+    
     
 }
 
 input {
-    width: 50%;
+    width: 100%;
+}
+
+h1 {
+    background-color: aqua;
+}
+
+button {
+    color: white;
+    background-color: black;
 }
 
 .newContact {
@@ -25,8 +36,21 @@ input {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: aqua;
+}
+
+.visibleNewContactCard {
+    background-color: aqua;
 }
 
 .showFormButton {
     height: 20px;
+}
+
+.test {
+    background-color: aqua;
+}
+
+input {
+    background-color: aqua;
 }
