@@ -1,0 +1,42 @@
+.header {
+    margin: 0px;
+    padding-top: 0px;
+    padding-left: 50px;
+    height: 10vh;
+    border-bottom: solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    background-color: rgb(27, 27, 27);
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+.header-title {
+    background-color: rgb(27, 27, 27);
+    color: aqua;
+}
+
+.headerMenuContainer {
+    background-color: rgb(27, 27, 27);
+}
+.header-subTitle {
+    background-color: rgb(27, 27, 27);
+    color: white;
+    font-weight: 500;
+}
+
+.header-paragraph {
+    margin-right: 100px;
+    background-color: rgb(27, 27, 27);
+    color: white;
+    font-size: larger;
+}
+
+.header-paragraph2 {
+    margin-right: 100px;
+    background-color: rgb(27, 27, 27);
+    color: white;
+}

@@ -13,7 +13,6 @@
     align-items: center;
     justify-content: space-between;
     background-color: aqua;
-    
 }
 
 .profilePicture {
@@ -52,5 +51,13 @@ img {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    background-color: aqua;
+}
+
+.hiddenInfosContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60px;
     background-color: aqua;
 }

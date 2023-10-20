@@ -3,4 +3,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 150px;
+}
+
+.contactsListContainer {
+    background-color: rgb(77, 76, 76);
+    border-radius: 50px;
+    box-shadow: inset 5px 5px 5px;
+}
+
+.allContactsTitle {
+    background-color: transparent;
+    padding-bottom: 20px;
+    color: white;
+    font-weight: 500;
 }

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ContactList from '../contactList/contactList';
 import './newContact.css';
 
 
@@ -47,11 +46,23 @@ function NewContact({ allContacts, setContacts }) {
 
     const [selectedFile, setSelectedFile] = useState(null);
 
+    //This is not my own function (apart from this "const file = event.target.files[0];")
+    //Here we make sure, that the uploaded image is readable for the browser so we can store it in the localStorage. We convert it to a Base46-encoding string.
+    //Also we make it accessible for the app to display in the newly created contact
     const handleFileChange = (event) => {
-        setSelectedFile(URL.createObjectURL(event.target.files[0]));
+        const file = event.target.files[0];
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            setSelectedFile(reader.result);
+        };
+        if (file) {
+            reader.readAsDataURL(file);
+        }
     };
 
+    //If showForm is true because we clicked on the Add button 
     if (showForm) {
+        //Here we set the key and value pairs for the new contact
         const saveNewContact = function () {
             let newContact = {
                 id: allContacts.length + 1,
@@ -62,14 +73,16 @@ function NewContact({ allContacts, setContacts }) {
                 avatar: selectedFile,
             };
 
-            
+            //The we move the newContact to the rest of the contacts 
             const updatedContacts = [...allContacts, newContact];
+            //For this we use the state that we imported from contactList
             setContacts(updatedContacts);
 
-            
+            //At the end we need to set showForm to false again so the Form hides again
             setShowForm(!showForm);
         };
 
+        //This is the form that we display after the Infos button was clicked
         invisibleForm = (
             <div className='test'>
             <div className='invisibleNewContactCard'>

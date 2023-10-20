@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import ContactList from './components/contactList/contactList'
-import NewContact from './components/newContact/newContact'
+import Header from './components/header/header'
 
 
 function App() {
@@ -9,9 +9,7 @@ function App() {
 
   return (
     <>
-      <div className='titleContainer'>
-        <h1 className='title'>Personal Contact Book</h1>
-      </div>
+      <Header></Header>
       <ContactList></ContactList>
     </>
   )
